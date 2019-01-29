@@ -33,37 +33,6 @@ switch(a) {
 }
 // result - other
 
-// Task 2.
-// Of the tasks with the conditional if else operator, perform 
-// tasks 1, 2 and 3 as a ternary operator.
-
-// Task 2.1
-let value = 'visible';
-value = value === 'hidden' ? 'visible' : 'hidden'; //  value === 'hidden';
-
-// Task 2.2
-let value2 = 0;
-
-value2 = value2 === 0 ? 1 
-    : value2 < 0 ? 'less then zero' 
-        : value2 * 10;
-
-console.log(value2);
-// result - 1
-
-// Task 2.3
-let car = {
-    name      : 'Lexus',
-    age       : 10,
-    create    : 2008,
-    needRepair: false
-}
-
-car.needRepair = car.age > 5 ? true : false;
-if (car.needRepair) {
-    console.log('Need Repair');
-}
-
 // Cycles
 // Task 3
 /**
@@ -129,10 +98,8 @@ let newString3  = '';
 for (let i = 0, max = testString3.length; i < max; i++) {
     if ((testString3[i - 1]) === " " || (i === 0 )) {
         newString3 += testString3[i].toUpperCase();
-    } else {
-        if (testString3[i] !== " ") {
-            newString3 += testString3[i];
-        }
+    } else if (testString3[i] !== " ") {
+        newString3 += testString3[i];
     }
 }
 // result - JavaScriptIsAPrettyGoodLanguage
@@ -148,7 +115,7 @@ let startArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 let newArray   = [];
 
 for (elem of startArray) {
-    if (elem % 2 > 0) {
+    if (elem % 2) {
         newArray.push(elem);
     }
 }
